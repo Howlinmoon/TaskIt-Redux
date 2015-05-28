@@ -25,8 +25,33 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rch-mg-NGQ" id="aEe-fb-a7h">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faL-do-vLn">
+                                                    <rect key="frame" x="17" y="8" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aal-eS-aXt">
+                                                    <rect key="frame" x="17" y="33" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5d-8j-67i">
+                                                    <rect key="frame" x="198" y="21" width="94" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" red="1" green="0.97758129630000001" blue="0.19500245390000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="H5d-8j-67i" id="gQW-by-x9o"/>
+                                            <outlet property="descriptionLabel" destination="aal-eS-aXt" id="P1P-Tf-i2x"/>
+                                            <outlet property="taskLabel" destination="faL-do-vLn" id="Ylh-yv-jPb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

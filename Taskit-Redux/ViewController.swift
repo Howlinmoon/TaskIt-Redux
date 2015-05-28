@@ -45,6 +45,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
+        cell.taskLabel.text = "Study German - \(indexPath.row)"
+        cell.descriptionLabel.text = "Verbs in past and present"
+        cell.dateLabel.text = "01/17/2015"
+        
+        
         
         return cell
     }
