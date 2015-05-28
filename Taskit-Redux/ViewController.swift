@@ -31,6 +31,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Method required by the UITableViewDataSource protocol we included
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        
+
+        
         return 5
         
     }
@@ -38,7 +41,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // Method required by the UITableViewDataSource protocol we included
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        println("indexPath.section = \(indexPath.section), .row = \(indexPath.row)")
+        
+        var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
+        
+        
+        return cell
     }
     
     // Method required by UITableViewDelegate
