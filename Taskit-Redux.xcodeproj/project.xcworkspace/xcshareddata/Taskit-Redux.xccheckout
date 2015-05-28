@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C06702D-CE01-4496-9F70-8C76FB7892D0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Taskit-Redux</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>89A224AFE2D09C72FF1C07C195F0241594FB0D30</key>
+		<string>https://github.com/Howlinmoon/TaskIt-Redux.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Taskit-Redux.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>89A224AFE2D09C72FF1C07C195F0241594FB0D30</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Howlinmoon/TaskIt-Redux.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>89A224AFE2D09C72FF1C07C195F0241594FB0D30</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89A224AFE2D09C72FF1C07C195F0241594FB0D30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Taskit-Redux</string>
+		</dict>
+	</array>
+</dict>
+</plist>
