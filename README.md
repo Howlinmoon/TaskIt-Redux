@@ -2,5 +2,4 @@
 
 Finished up:
 
-http://bitfountain.io/courses/complete-ios8/lectures/4098
-
+http://bitfountain.io/courses/complete-ios8/lectures/4099

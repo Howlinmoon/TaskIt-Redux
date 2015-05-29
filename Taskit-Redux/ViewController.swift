@@ -23,14 +23,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //self.tableView.dataSource = self
         //self.tableView.delegate = self
         
-        let task1:Dictionary<String, String> = ["task": "Study German", "subtask": "Verbs", "date": "01/17/2015"]
-        let task2:Dictionary<String, String> = ["task": "Watch TV", "subtask": "The Daily Show", "date": "05/29/2015"]
-        let task3:Dictionary<String, String> = ["task": "Eat", "subtask": "A Barn Burger", "date": "05/30/2015"]
+        
+        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: "01/17/2015")
+        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: "05/29/2015")
+        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: "05/30/2015")
         
         
-        println(task2["task"])
-        println(task2["subtask"])
-        println(task2["date"])
+        println(task2.task)
+        println(task2.subTask)
+        println(task2.date)
         
         
         taskArray = [task1, task2, task3]
@@ -60,13 +61,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
-        let taskDict = taskArray[indexPath.row]
-        cell.taskLabel.text = taskDict["task"]
-        cell.descriptionLabel.text = taskDict["subtask"]
-        cell.dateLabel.text = taskDict["date"]
-        
-        
-        
+        let thisTask = taskArray[indexPath.row]
+        cell.taskLabel.text        = thisTask.task
+        cell.descriptionLabel.text = thisTask.subTask
+        cell.dateLabel.text        = thisTask.date
+
         return cell
     }
     
