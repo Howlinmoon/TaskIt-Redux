@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		963C409F1B177A2B0068C632 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C409E1B177A2B0068C632 /* TaskCell.swift */; };
 		9676D6511B18D11300A75ABC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9676D6501B18D11300A75ABC /* TaskModel.swift */; };
+		968D058C1B19E69200A25437 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D058B1B19E69200A25437 /* TaskDetailViewController.swift */; };
 		96CB26B41B1629E50044FB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB26B31B1629E50044FB3D /* AppDelegate.swift */; };
 		96CB26B61B1629E50044FB3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB26B51B1629E50044FB3D /* ViewController.swift */; };
 		96CB26B91B1629E50044FB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CB26B71B1629E50044FB3D /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		963C409E1B177A2B0068C632 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		9676D6501B18D11300A75ABC /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		968D058B1B19E69200A25437 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		96CB26AE1B1629E50044FB3D /* Taskit-Redux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taskit-Redux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB26B21B1629E50044FB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CB26B31B1629E50044FB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				96CB26B31B1629E50044FB3D /* AppDelegate.swift */,
 				96CB26B51B1629E50044FB3D /* ViewController.swift */,
+				968D058B1B19E69200A25437 /* TaskDetailViewController.swift */,
 				9676D6501B18D11300A75ABC /* TaskModel.swift */,
 				963C409E1B177A2B0068C632 /* TaskCell.swift */,
 				96CB26B71B1629E50044FB3D /* Main.storyboard */,
@@ -223,6 +226,7 @@
 				963C409F1B177A2B0068C632 /* TaskCell.swift in Sources */,
 				9676D6511B18D11300A75ABC /* TaskModel.swift in Sources */,
 				96CB26B41B1629E50044FB3D /* AppDelegate.swift in Sources */,
+				968D058C1B19E69200A25437 /* TaskDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
