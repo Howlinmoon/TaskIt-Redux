@@ -16,6 +16,7 @@
 		96CB26BB1B1629E50044FB3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB26BA1B1629E50044FB3D /* Images.xcassets */; };
 		96CB26BE1B1629E50044FB3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CB26BC1B1629E50044FB3D /* LaunchScreen.xib */; };
 		96CB26CA1B1629E50044FB3D /* Taskit_ReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB26C91B1629E50044FB3D /* Taskit_ReduxTests.swift */; };
+		96EDE0631B1CC220002F86F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDE0621B1CC220002F86F0 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		96CB26C31B1629E50044FB3D /* Taskit-ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Taskit-ReduxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB26C81B1629E50044FB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CB26C91B1629E50044FB3D /* Taskit_ReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskit_ReduxTests.swift; sourceTree = "<group>"; };
+		96EDE0621B1CC220002F86F0 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				968D058B1B19E69200A25437 /* TaskDetailViewController.swift */,
 				9676D6501B18D11300A75ABC /* TaskModel.swift */,
 				963C409E1B177A2B0068C632 /* TaskCell.swift */,
+				96EDE0621B1CC220002F86F0 /* Date.swift */,
 				96CB26B71B1629E50044FB3D /* Main.storyboard */,
 				96CB26BA1B1629E50044FB3D /* Images.xcassets */,
 				96CB26BC1B1629E50044FB3D /* LaunchScreen.xib */,
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB26B61B1629E50044FB3D /* ViewController.swift in Sources */,
+				96EDE0631B1CC220002F86F0 /* Date.swift in Sources */,
 				963C409F1B177A2B0068C632 /* TaskCell.swift in Sources */,
 				9676D6511B18D11300A75ABC /* TaskModel.swift in Sources */,
 				96CB26B41B1629E50044FB3D /* AppDelegate.swift in Sources */,
