@@ -46,8 +46,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
-    
+    // Called right before the new ViewController sends data to the screen
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Which segue is this?
+        if segue.identifier == "showTaskDetail" {
+            println("showTaskDetail segue called")
+            let detailVC: TaskDetailViewController = segue.destinationViewController as! TaskDetailViewController
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            
+            let thisTask = taskArray[indexPath!.row]
+            
+            println("thisTask: \(thisTask.task)")
+            detailVC.detailTaskModel = thisTask
+        }
         
     }
     
