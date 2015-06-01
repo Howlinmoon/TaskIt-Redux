@@ -23,10 +23,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //self.tableView.dataSource = self
         //self.tableView.delegate = self
         
+        let date1 = Date.from(year: 2015, month: 1, day: 17)
+        let date2 = Date.from(year: 2015, month: 5, day: 29)
+        let date3 = Date.from(year: 2015, month: 5, day: 30)
         
-        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: "01/17/2015")
-        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: "05/29/2015")
-        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: "05/30/2015")
+        
+        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: date1)
+        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: date2)
+        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: date3)
         
         
         println(task2.task)
