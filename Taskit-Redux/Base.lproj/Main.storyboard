@@ -63,12 +63,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="w6S-CJ-fqz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vfx-wy-w5U"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vfx-wy-w5U">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="BYZ-38-t0r" id="WVT-1e-28Z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Mi1-OP-kwe" id="hWU-x1-9Q7"/>
                         <segue destination="dD5-GU-ejm" kind="show" identifier="showTaskDetail" id="YEM-zi-QMd"/>
-                        <segue destination="O6a-gW-Vuw" kind="presentation" id="4bJ-NZ-M5R"/>
+                        <segue destination="O6a-gW-Vuw" kind="presentation" identifier="showTaskAdd" id="4bJ-NZ-M5R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,7 +112,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="NYg-qV-zfZ">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8qq-AA-98k"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8qq-AA-98k">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="dD5-GU-ejm" id="UvF-8c-Pyx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="7Qe-tq-Kr7"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -139,6 +147,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="O6a-gW-Vuw" eventType="touchUpInside" id="HR4-Qb-ywE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7XI-2N-hIn">
                                 <rect key="frame" x="21" y="80" width="280" height="30"/>
@@ -186,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0T-u1-g8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2447" y="996"/>
+            <point key="canvasLocation" x="2218" y="1796"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="roK-xN-Nfb">

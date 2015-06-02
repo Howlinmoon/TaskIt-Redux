@@ -68,6 +68,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    // For adding a task
+    @IBAction func addButtonTapped(sender: UIBarButtonItem) {
+        
+        self.performSegueWithIdentifier("showTaskAdd", sender: self)
+        
+    }
+    
+    
+    
     // Method required by the UITableViewDataSource protocol we included
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
