@@ -151,6 +151,12 @@
                                     <action selector="cancelButtonTapped:" destination="O6a-gW-Vuw" eventType="touchUpInside" id="HR4-Qb-ywE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f94-Eg-WbJ">
+                                <rect key="frame" x="237" y="28" width="64" height="30"/>
+                                <state key="normal" title="Add Task">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7XI-2N-hIn">
                                 <rect key="frame" x="21" y="80" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -161,12 +167,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-X4-T7D">
-                                <rect key="frame" x="0.0" y="205" width="320" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="454955611.62043399">
-                                    <!--2015-06-02 16:33:31 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-a1-6Dl">
                                 <rect key="frame" x="21" y="51" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -185,15 +185,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f94-Eg-WbJ">
-                                <rect key="frame" x="237" y="28" width="64" height="30"/>
-                                <state key="normal" title="Add Task">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-X4-T7D">
+                                <rect key="frame" x="0.0" y="205" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="454955611.62043399">
+                                    <!--2015-06-02 16:33:31 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dueDatePicker" destination="e3W-X4-T7D" id="cpg-fb-cHg"/>
+                        <outlet property="subtaskTextField" destination="wHp-Jj-YgX" id="63F-GY-nEU"/>
+                        <outlet property="taskTextField" destination="7XI-2N-hIn" id="aJV-gG-9RZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0T-u1-g8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
