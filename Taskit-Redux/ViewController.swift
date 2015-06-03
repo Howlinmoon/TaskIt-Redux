@@ -49,6 +49,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+/*
+        // Traditional style using an embedded function
+        // Returns True if taskOne is before taskTwo
+        func sortByDate(taskOne: TaskModel, taskTwo: TaskModel) -> Bool {
+            // which date comes first?
+            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
+        }
+
+        taskArray = taskArray.sorted(sortByDate)
+*/
+        
+        // Same type of sorting using an enclosure
+        
+        taskArray = taskArray.sorted {
+            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
+            // comparison logic from above
+            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
+        }
+        
+        
+        
         self.tableView.reloadData()
     }
     
@@ -121,6 +142,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println("You tapped on row: \(indexPath.row)")
         performSegueWithIdentifier("showTaskDetail", sender: self)
     }
+    
+    
+    
+    // Helper functions
+    
+    
 
 }
 
