@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Which segue is this?
+        println("segue identifier: \(segue.identifier)")
         if segue.identifier == "showTaskDetail" {
             println("showTaskDetail segue called")
             let detailVC: TaskDetailViewController = segue.destinationViewController as! TaskDetailViewController
@@ -64,6 +65,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             println("thisTask: \(thisTask.task)")
             detailVC.detailTaskModel = thisTask
+        } else if segue.identifier == "showTaskAdd" {
+            let addTaskVC:AddTaskViewController = segue.destinationViewController as! AddTaskViewController
+            addTaskVC.mainVC = self
         }
         
     }
