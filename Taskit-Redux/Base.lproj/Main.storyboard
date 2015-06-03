@@ -117,7 +117,11 @@
                                 <action selector="cancelButtonTapped:" destination="dD5-GU-ejm" id="UvF-8c-Pyx"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="7Qe-tq-Kr7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="7Qe-tq-Kr7">
+                            <connections>
+                                <action selector="doneBarButtonItemPressed:" destination="dD5-GU-ejm" id="cIw-4q-mmr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

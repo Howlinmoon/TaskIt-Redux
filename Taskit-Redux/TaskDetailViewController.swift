@@ -43,5 +43,13 @@ class TaskDetailViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
+    // Return to the main view controller
+    @IBAction func doneBarButtonItemPressed(sender: UIBarButtonItem) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
 
+    
+    
 }
