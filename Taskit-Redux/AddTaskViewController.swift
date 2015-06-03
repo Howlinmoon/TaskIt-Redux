@@ -35,6 +35,19 @@ class AddTaskViewController: UIViewController {
         
     }
 
+    // Adding a task via the add task button
+    @IBAction func addTaskButtonTapped(sender: UIButton) {
+        
+        var task = TaskModel(task: taskTextField.text, subTask: subtaskTextField.text, date: dueDatePicker.date)
+        
+        // Add the new task to our array
+        mainVC.taskArray.append(task)
+        // dump this view controller - return to the main one
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
     
     
 }
