@@ -73,6 +73,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             println("thisTask: \(thisTask.task)")
             detailVC.detailTaskModel = thisTask
+            detailVC.mainVC = self
+            
+            
         } else if segue.identifier == "showTaskAdd" {
             let addTaskVC:AddTaskViewController = segue.destinationViewController as! AddTaskViewController
             addTaskVC.mainVC = self
