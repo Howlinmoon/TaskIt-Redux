@@ -14,7 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     
-    var taskArray:[TaskModel] = []
+    var baseArray: [[TaskModel]] = []
+    
+    //var taskArray:[TaskModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +30,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let date3 = Date.from(year: 2015, month: 5, day: 30)
         
         
-        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: date1)
-        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: date2)
-        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: date3)
+        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: date1, completed: false)
+        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: date2, completed: false)
+        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: date3, completed: false)
         
         
         println(task2.task)
@@ -38,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         println(task2.date)
         
         
-        taskArray = [task1, task2, task3]
+        let taskArray = [task1, task2, task3]
         
         // force refresh of info in the tableview
         self.tableView.reloadData()
