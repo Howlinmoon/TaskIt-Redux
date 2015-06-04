@@ -42,6 +42,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let taskArray = [task1, task2, task3]
         
+        var completedArray = [TaskModel(task: "Code", subTask: "Task Project", date: date2, completed: true)]
+        
+        baseArray = [taskArray, completedArray]
+        
+        
         // force refresh of info in the tableview
         self.tableView.reloadData()
         
