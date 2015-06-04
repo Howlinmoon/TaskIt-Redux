@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             let indexPath = self.tableView.indexPathForSelectedRow()
             
-            let thisTask = taskArray[indexPath!.row]
+            let thisTask = baseArray[indexPath!.section][indexPath!.row]
             
             println("thisTask: \(thisTask.task)")
             detailVC.detailTaskModel = thisTask
@@ -118,13 +118,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return baseArray.count
+    }
     
     
     // Method required by the UITableViewDataSource protocol we included
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
-        return taskArray.count
+        return baseArray[section].count
         
     }
     
@@ -135,7 +138,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as! TaskCell
         
-        let thisTask = taskArray[indexPath.row]
+        let thisTask = baseArray[indexPath.section][indexPath.row]
         cell.taskLabel.text        = thisTask.task
         cell.descriptionLabel.text = thisTask.subTask
         cell.dateLabel.text        = Date.toString(date: thisTask.date)
