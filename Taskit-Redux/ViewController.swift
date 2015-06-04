@@ -68,8 +68,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 */
         
         // Same type of sorting using an enclosure
-        
-        taskArray = taskArray.sorted {
+        // only sorting the first array - the incomplete tasks one
+        baseArray[0] = baseArray[0].sorted {
             (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
             // comparison logic from above
             return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
