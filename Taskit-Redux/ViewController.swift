@@ -22,6 +22,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        /* Pre-Core Data Refactoring
+        
         //self.tableView.dataSource = self
         //self.tableView.delegate = self
         
@@ -49,6 +51,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // force refresh of info in the tableview
         self.tableView.reloadData()
+
+    */
+        
+        
         
     }
 
