@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9605BDAA1B246E7A003BA7F8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9605BDA91B246E7A003BA7F8 /* CoreData.framework */; };
 		963C409F1B177A2B0068C632 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C409E1B177A2B0068C632 /* TaskCell.swift */; };
 		9676D6511B18D11300A75ABC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9676D6501B18D11300A75ABC /* TaskModel.swift */; };
 		968D058C1B19E69200A25437 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D058B1B19E69200A25437 /* TaskDetailViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9605BDA91B246E7A003BA7F8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		963C409E1B177A2B0068C632 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		9676D6501B18D11300A75ABC /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		968D058B1B19E69200A25437 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9605BDAA1B246E7A003BA7F8 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 		96CB26B11B1629E50044FB3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9605BDA91B246E7A003BA7F8 /* CoreData.framework */,
 				96CB26B21B1629E50044FB3D /* Info.plist */,
 			);
 			name = "Supporting Files";
