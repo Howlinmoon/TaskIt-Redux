@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var fetchedResultsController:NSFetchedResultsController = NSFetchedResultsController()
     
     var baseArray: [[TaskModel]] = []
     
@@ -21,6 +26,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fetchedResultsController = getFetchResultsController()
+        fetchedResultsController.delegate = self
+        fetchedResultsController.performFetch(nil)
         
         /* Pre-Core Data Refactoring
         
@@ -201,6 +210,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    // Helper
+    
+    func taskFetchRequest() -> NSFetchRequest {
+        let fetchRequest = NSFetchRequest(entityName: "TaskModel")
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+
+        return fetchRequest
+    }
+    
+    func getFetchResultsController() -> NSFetchedResultsController {
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+
+        return fetchedResultsController
+    }
 
 }
 
