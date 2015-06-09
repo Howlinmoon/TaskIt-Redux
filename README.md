@@ -1,8 +1,8 @@
 # TaskIt-Redux
 
-Finished up:
+Continue next time here:
 
 
 
 
-http://bitfountain.io/courses/complete-ios8/lectures/4132
+http://bitfountain.io/courses/complete-ios8/lectures/4133
