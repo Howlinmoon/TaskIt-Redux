@@ -19,10 +19,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var fetchedResultsController:NSFetchedResultsController = NSFetchedResultsController()
     
-    //var baseArray: [[TaskModel]] = []
-    
-    //var taskArray:[TaskModel] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,68 +27,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         fetchedResultsController.delegate = self
         fetchedResultsController.performFetch(nil)
         
-        /* Pre-Core Data Refactoring
-        
-        //self.tableView.dataSource = self
-        //self.tableView.delegate = self
-        
-        let date1 = Date.from(year: 2015, month: 1, day: 17)
-        let date2 = Date.from(year: 2015, month: 5, day: 29)
-        let date3 = Date.from(year: 2015, month: 5, day: 30)
-        
-        
-        let task1 = TaskModel(task: "Study German", subTask: "Verbs", date: date1, completed: false)
-        let task2 = TaskModel(task: "Watch TV", subTask: "The Daily Show", date: date2, completed: false)
-        let task3 = TaskModel(task: "Eat", subTask: "A Barn Burger", date: date3, completed: false)
-        
-        
-        println(task2.task)
-        println(task2.subTask)
-        println(task2.date)
-        
-        
-        let taskArray = [task1, task2, task3]
-        
-        var completedArray = [TaskModel(task: "Code", subTask: "Task Project", date: date2, completed: true)]
-        
-        baseArray = [taskArray, completedArray]
-        
-        
-        // force refresh of info in the tableview
-        self.tableView.reloadData()
-
-    */
-        
-        
-        
     }
 
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-/*
-        // Traditional style using an embedded function
-        // Returns True if taskOne is before taskTwo
-        func sortByDate(taskOne: TaskModel, taskTwo: TaskModel) -> Bool {
-            // which date comes first?
-            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
-        }
 
-        taskArray = taskArray.sorted(sortByDate)
-*/
-        
-        // Same type of sorting using an enclosure
-        // only sorting the first array - the incomplete tasks one
-        baseArray[0] = baseArray[0].sorted {
-            (taskOne:TaskModel, taskTwo:TaskModel) -> Bool in
-            // comparison logic from above
-            return taskOne.date.timeIntervalSince1970 < taskTwo.date.timeIntervalSince1970
-        }
-        
-        
-        
-        self.tableView.reloadData()
     }
     
     
@@ -198,31 +139,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let thisTask = fetchedResultsController.objectAtIndexPath(indexPath) as! TaskModel
         
         if indexPath.section == 0 {
-            
-            // swiped from section 0 - add to section 1 - completed
-            /*
-            var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subtask, date: thisTask.date, completed: true)
-            baseArray[1].append(newTask)
-            */
+
             
             thisTask.completed = true
             
         } else {
-            // swiped from section 1 - add to section 0 - uncompleted
-            /*
-            var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subtask, date: thisTask.date, completed: false)
-            baseArray[0].append(newTask)
-            */
-            
+
             thisTask.completed = false
         }
         
         (UIApplication.sharedApplication().delegate as! AppDelegate).saveContext()
-        
-        /*
-        baseArray[indexPath.section].removeAtIndex(indexPath.row)
-        tableView.reloadData()
-        */
+
     }
     
     // NSFetchedResultsControllerDelegate
@@ -237,14 +164,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func taskFetchRequest() -> NSFetchRequest {
         let fetchRequest = NSFetchRequest(entityName: "TaskModel")
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        
+        let completedDescriptor = NSSortDescriptor(key: "completed", ascending: true)
+        
+        fetchRequest.sortDescriptors = [completedDescriptor, sortDescriptor]
 
         return fetchRequest
     }
     
     func getFetchResultsController() -> NSFetchedResultsController {
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: "completed", cacheName: nil)
 
         return fetchedResultsController
     }
