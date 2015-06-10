@@ -29,7 +29,7 @@ class TaskDetailViewController: UIViewController {
         println("From TaskDetailVC: \(self.detailTaskModel.task)")
         
         self.taskTextField.text = detailTaskModel.task
-        self.subtaskTextField.text = detailTaskModel.subTask
+        self.subtaskTextField.text = detailTaskModel.subtask
         self.dueDatePicker.date = detailTaskModel.date
         
     }
@@ -47,10 +47,15 @@ class TaskDetailViewController: UIViewController {
     @IBAction func doneBarButtonItemPressed(sender: UIBarButtonItem) {
         
         
-        var task = TaskModel(task: taskTextField.text, subTask: subtaskTextField.text, date: dueDatePicker.date, completed: false)
+        let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         
-        // Update the edited task, once we look up its index number
-        mainVC.baseArray[0][mainVC.tableView.indexPathForSelectedRow()!.row] = task
+        detailTaskModel.task = taskTextField.text
+        detailTaskModel.subtask = subtaskTextField.text
+        detailTaskModel.date = dueDatePicker.date
+        detailTaskModel.completed = detailTaskModel.completed
+        
+        // Save our changes to core-data
+        appDelegate.saveContext()
         
         self.navigationController?.popViewControllerAnimated(true)
         
